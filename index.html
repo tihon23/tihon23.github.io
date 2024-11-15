@@ -1,72 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Школа программирования для детей</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
+        /* Глобальные стили */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
         header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #2c2c2c;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
-        nav {
-            margin: 20px 0;
+        header .logo {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: #00e5ff;
         }
         nav a {
             margin: 0 15px;
-            text-decoration: none;
-            color: #4CAF50;
+            font-weight: 400;
+            transition: color 0.3s;
         }
-        main {
-            padding: 20px;
+        nav a:hover {
+            color: #ff4081;
+        }
+        .hero {
+            position: relative;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('https://via.placeholder.com/1920x1080?text=Kids+Coding+School+Background');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+        .btn-primary {
+            background-color: #ff006e;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.1em;
+            color: #ffffff;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #e6005b;
+        }
+        .section {
+            padding: 80px 5%;
+        }
+        .trailer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            padding: 40px 0;
+        }
+        .trailer video {
+            width: 80%;
+            max-width: 1000px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        .game-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+            transition: transform 0.3s;
+        }
+        .game-section:hover {
+            transform: translateY(-5px);
+        }
+        .game-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .game-section img {
+            width: 50%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+        .game-content {
+            width: 50%;
+        }
+        .game-content h3 {
+            color: #00e5ff;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .game-content p {
+            color: #ccc;
+            line-height: 1.6em;
+        }
+        .contact {
+            background-color: #121212;
+            padding: 60px 5%;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            background-color: #333;
+            border: 1px solid #444;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        .contact-form button {
+            background-color: #00e5ff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #00b4d8;
         }
         footer {
-            background-color: #f1f1f1;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            background-color: #2c2c2c;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #00e5ff;
+            margin: 0 10px;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Welcome to My Test Website</h1>
+    <div class="logo">Школа программирования для детей</div>
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#courses">Курсы</a>
+        <a href="#contact">Контакты</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-</nav>
+<section id="home" class="hero">
+    <h1>Учите детей программировать!</h1>
+    <p>Веселые и интерактивные курсы по созданию игр для детей 7-17 лет</p>
+    <button class="btn-primary">Записаться сейчас</button>
+</section>
 
-<main>
-    <section id="home">
-        <h2>Home</h2>
-        <p>This is the home page of my test website.</p>
-    </section>
+<!-- Видео трейлер -->
+<section class="trailer">
+    <video controls poster="https://via.placeholder.com/1280x720?text=Трейлер">
+        <source src="path-to-your-trailer.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+</section>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>Learn more about me and what I do.</p>
-    </section>
+<section id="courses" class="section">
+    <h2>Наши курсы</h2>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch via email: amogus@email.com</p>
-    </section>
-</main>
+    <!-- Игра 1 -->
+    <div class="game-section">
+        <img src="https://via.placeholder.com/600x400?text=Flappy+Bird+Clone" alt="Flappy Bird">
+        <div class="game-content">
+            <h3>Клон Flappy Bird</h3>
+            <p>Изучите основы разработки игр, создав свой собственный клон Flappy Bird! Этот курс охватывает ключевые концепции программирования, такие как циклы, условия и базовая физика.</p>
+        </div>
+    </div>
+
+    <!-- Игра 2 -->
+    <div class="game-section">
+        <img src="https://via.placeholder.com/600x400?text=Platformer+Game" alt="Платформер">
+        <div class="game-content">
+            <h3>Платформер</h3>
+            <p>Погрузитесь в мир 2D-платформеров! Научитесь создавать персонажей, разрабатывать уровни и реализовывать механики, такие как прыжки и сбор предметов.</p>
+        </div>
+    </div>
+
+    <!-- Игра 3 -->
+    <div class="game-section">
+        <img src="https://via.placeholder.com/600x400?text=Space+Shooter" alt="Космический шутер">
+        <div class="game-content">
+            <h3>Космический шутер</h3>
+            <p>Постройте динамичный шутер в космосе, создавайте врагов и добавляйте звуковые эффекты для захватывающего игрового процесса.</p>
+        </div>
+    </div>
+
+    <!-- Игра 4 -->
+    <div class="game-section">
+        <img src="https://via.placeholder.com/600x400?text=Puzzle+Game" alt="Головоломка">
+        <div class="game-content">
+            <h3>Головоломка</h3>
+            <p>Создайте увлекательную головоломку, научитесь работать с сетками и обрабатывать ввод игрока.</p>
+        </div>
+    </div>
+
+    <!-- Игра 5 -->
+    <div class="game-section">
+        <img src="https://via.placeholder.com/600x400?text=2D+Adventure" alt="2D Adventure">
+        <div class="game-content">
+            <h3>2D Приключение</h3>
+            <p>Погрузитесь в создание увлекательного 2D приключения с героями, сюжетом и уникальной игровой механикой.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Свяжитесь с нами</h2>
+    <form class="contact-form">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="email" placeholder="Ваш email" required>
+        <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+</section>
 
 <footer>
-    <p>© 2024 Tiko's Website</p>
+    <p>© 2024 Школа программирования для детей | <a href="#">Политика конфиденциальности</a></p>
 </footer>
 
 </body>
