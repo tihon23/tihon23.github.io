@@ -90,6 +90,7 @@ nav a:hover {
     gap: 20px;
     margin-bottom: 40px;
     transition: transform 0.3s;
+    flex-wrap: wrap; /* Added this line */
 }
 .game-section:hover {
     transform: translateY(-5px);
@@ -97,22 +98,34 @@ nav a:hover {
 .game-section:nth-child(even) {
     flex-direction: row-reverse;
 }
+
 .game-section img {
-    width: 45%;
+    width: 100%;
+    max-width: 400px; /* Added max-width to prevent overflow */
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
+
 .game-content {
-    width: 45%;
+    width: 100%;
+    max-width: 400px; /* Added max-width to ensure it fits on mobile */
 }
-.game-content h3 {
-    color: #00e5ff;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-.game-content p {
-    color: #ccc;
-    line-height: 1.6em;
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .game-section {
+        flex-direction: column;
+        align-items: center; /* Ensure everything is centered */
+    }
+    .game-section img, .game-content {
+        width: 100%;
+    }
+    .game-content h3 {
+        font-size: 1.3em;
+    }
+    .game-content p {
+        font-size: 0.9em;
+    }
 }
 .contact {
     background-color: #121212;
