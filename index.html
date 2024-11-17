@@ -99,6 +99,37 @@ nav a:hover {
     flex-direction: row-reverse;
 }
 
+/* Styles for the Description Section */
+.description-section {
+    background-color: #2b2b2b;
+    border-radius: 15px;
+    padding: 40px 5%;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+.description-section h2 {
+    font-size: 2em;
+    color: #00e5ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.description-section p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+.description-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+.description-section li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #ff006e;
+}
+
+
 /* Desktop styles */
 .game-section img {
     width: 45%;
@@ -162,6 +193,72 @@ footer a {
     margin: 0 10px;
     font-size: 1.2em;
 }
+
+/* Enhanced About Section Styles */
+.about {
+    background-color: #333333; /* Darker background for better contrast */
+    padding: 60px 10%;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+.about h2 {
+    color: #00e5ff;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+}
+
+.about p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Centered bullet points */
+.about ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the list items horizontally */
+    gap: 15px;
+}
+
+.about ul li {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: #444;
+    color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    width: fit-content;
+    text-align: center; /* Center text within the list item */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about ul li:hover {
+    background-color: #00b4d8;
+    transform: scale(1.05);
+}
+
+.about ul li::before {
+    content: '✔';
+    margin-right: 10px;
+    color: #00e5ff;
+    font-size: 1.5em;
+}
+
+
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
@@ -233,12 +330,29 @@ footer a {
 
 <section id="home" class="hero">
     <h1>Учитесь Программировать с Нуля!</h1>
-    <p>Веселые и интерактивные курсы по созданию игр для детей 7-17 лет</p>
+    <p>Весёлые и интерактивные курсы по созданию игр для детей от 7 до 17 лет</p>
     <button class="btn-primary">Записаться сейчас</button>
 </section>
 
+<!-- Description Section -->
+<section id="description" class="section description-section">
+    <h2>Чему научит вас наш курс?</h2>
+    <p>
+        Этот курс по программированию покажет вам, как по-настоящему выглядит создание программ и игр. Unity является одной из самых популярных платформ для создания игр. 
+        Вы получите навыки в языке C#, который является одним из самых востребованных языков программирования. Знания полученные в разработке игр используются далеко не только в сфере Game-dev
+        Полученный опыт будет полезен при любом взаимодействии с компьютерным кодом. Чем раньше начать, тем успешней вы будете!
+    </p>
+    <ul>
+        <li>Интерактивные уроки в форме аудио/видео звонка-урока</li>
+        <li>Обучение с полного нуля до опытного разработчика</li>
+        <li>Развивайте навыки программирования и проектирования</li>
+        <li>Подготовка к IT-профессиям будущего</li>
+    </ul>
+</section>
+
+
 <section id="courses" class="section">
-    <h2>В нашем курсе обучения вы создадите 5 игр, даже если вы полный новичок! </h2>
+    <h2>На нашем курсе вы создадите 5 игр, даже если вы — полный новичок!</h2>
 
     <!-- Игра 1 -->
     <div class="game-section">
@@ -253,7 +367,7 @@ footer a {
                 <li>Что такое объекты в Unity и C#</li>
                 <li>Основы физики для игр (гравитация, столкновения)</li>
                 <li>Создание и использование спрайтов и текстур</li>
-                <li>Что такое и как работает UI (пользовательский интерфейс)</li>
+                <li>Что такое UI и как он работает (пользовательский интерфейс)</li>
             </ul>
         </div>
     </div>
@@ -270,7 +384,7 @@ footer a {
                 <li>Как настроить передвижение 2д персонажа по карте</li>
                 <li>Про реализацию механики прыжков и столкновений</li>
                 <li>Как создать персонажа с анимацией и движением</li>
-                <li>Про интерактивность объектов (сбор предметов, взаимодействие с окружающей средой)</li>
+                <li>Про интерактивность объектов (сбор предметов и взаимодействие с окружающей средой)</li>
                 <li>Про оптимизацию игрового процесса для разных уровней сложности</li>
             </ul>
         </div>
@@ -282,7 +396,7 @@ footer a {
         <div class="game-content">
             <h3>Поехали!</h3>
             <p>Садись за руль и собирай посылки, разбросанные по карте!</p>
-            <p>Вы узнаете как:</p>
+            <p>вы узнаете, как:</p>
             <ul>
                 <li>Создать главное меню для игры</li>
                 <li>Настроить выбор автомобиля</li>
@@ -301,7 +415,7 @@ footer a {
         <img src="Game-4_Cover.png" alt="Игра Катимся">
         <div class="game-content">
             <h3>Катимся!</h3>
-            <p>Вы перешли в третье измерение! Катись от летящих на тебя ракет!</p>
+            <p>Вы перешли в третье измерение! Уклоняйтесь от летящих на тебя ракет!</p>
             <p>Вы узнаете как:</p>
             <ul>
                 <li>Создавать 3д объекты</li>
@@ -325,7 +439,7 @@ footer a {
                 <li>Создавать систему очков и жизней</li>
                 <li>Работать с большим количеством классов</li>
                 <li>Импортировать ассеты в Unity</li>
-                <li>Создавать интерфейс для мобильных устройст</li>
+                <li>Создавать интерфейс для мобильных устройств</li>
                 <li>Подключить телефон к Unity</li>
             </ul>
         </div>
