@@ -53,3 +53,16 @@ function scrollToSection() {
     });
   }
   
+let lastScrollY = window.scrollY;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        // Hide header on scroll down
+        header.style.transform = 'translateY(-100%)';
+    } else {
+        // Show header on scroll up
+        header.style.transform = 'translateY(0)';
+    }
+    lastScrollY = window.scrollY;
+});

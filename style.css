@@ -125,6 +125,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+    transition: transform 0.3s ease-in-out;
 }
 header .logo {
     font-size: 1.5em;
@@ -481,4 +482,39 @@ input[type="text"], input[type="email"], input[type="tel"] {
   button:hover {
     background-color: #45a049;
   }
+
+
+
+.free-lesson {
+    background-color: #ff4081;
+    color: #ffffff;
+    padding: 10px 5%;
+    text-align: center;
+    margin: 7px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.free-lesson-content h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.free-lesson-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.btn-secondary {
+    background-color: #ffffff;
+    color: #ff4081;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+.btn-secondary:hover {
+    background-color: #ffe3ed;
+    transform: scale(1.05);
+}
   
