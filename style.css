@@ -2,6 +2,80 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.selected-lang {
+    cursor: pointer;
+    display: flex;
+    vertical-align: auto;
+    justify-content: space-between;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.selected-lang:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: var(--flag-url, url('https://flagsapi.com/GB/flat/32.png')); /* Default to English flag */
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.lang-menu {
+    margin-top: 0px;
+    position: relative;
+}
+
+.lang-menu ul {
+    margin: 0;
+    padding: 0;
+    background-color: #313131;
+    border: 1px solid #1b1b1b;
+    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+
+.lang-menu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu ul li a {
+    width: 125px;
+    display: block;
+    padding: 5px 10px;
+}
+
+.lang-menu ul li a:before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.lang-menu ul li a:hover {
+    background-color: #4d4d4d;
+}
+
+.lang-option-en:before {
+    background-image: url(https://flagsapi.com/GB/flat/32.png);
+}
+
+.lang-option-ru:before {
+    background-image: url(https://flagsapi.com/RU/flat/32.png);
+}
+
+.lang-menu:hover ul {
+    display: block;
+}
+
 #popup {
     display: none; /* Hidden by default */
     position: fixed;
@@ -12,7 +86,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1000;
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -517,4 +590,3 @@ input[type="text"], input[type="email"], input[type="tel"] {
     background-color: #ffe3ed;
     transform: scale(1.05);
 }
-  

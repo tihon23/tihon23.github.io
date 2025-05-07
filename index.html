@@ -3,169 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Школа Unity и C#</title>
+    <title data-en="Unity and C# School" data-ru="Школа Unity и C#">Школа Unity и C#</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 <header>
-    <div class="logo">КодБайт</div>
+    <div class="logo" data-en="CodeByte" data-ru="КодБайт">КодБайт</div>
     <nav>
-        <a href="#description">Про Курс</a>
-        <a href="#courses">Игры</a>
-        <a href="#signup">Записаться</a>
+        <!-- <a href="#description" data-en="About Course" data-ru="Про Курс">Про Курс</a> -->
+        <!-- <a href="#courses" data-en="Games" data-ru="Игры">Игры</a> -->
+        <a href="#signup" data-en="Sign Up" data-ru="Записаться">Записаться</a>
+
+        <div class="lang-menu">
+            <div class="selected-lang" data-en="English" data-ru="Русский">English</div>
+            <ul>
+                <li><a href="#" class="lang-option" data-lang="ru">Русский</a></li>
+                <li><a href="#" class="lang-option" data-lang="en">English</a></li>
+            </ul>
+
+        </div>
     </nav>
+
+    
 </header>
 
 <section id="home" class="hero">
-    <h1>Учитесь Программировать с Нуля!</h1>
-    <p>Весёлые и интерактивные курсы по созданию игр для всех возрастов</p>
-    <button class="btn-primary" onclick="scrollToSection()">Записаться сейчас</button>
+    <h1 data-en="Learn Programming from Scratch!" data-ru="Учитесь Программировать с Нуля!">Учитесь Программировать с Нуля!</h1>
+    <p data-en="Fun and interactive game development courses for all ages" data-ru="Весёлые и интерактивные курсы по созданию игр для всех возрастов">
+        Весёлые и интерактивные курсы по созданию игр для всех возрастов
+    </p>
+    <button class="btn-primary" onclick="scrollToSection()" data-en="Sign Up Now" data-ru="Записаться сейчас">Записаться сейчас</button>
 </section>
 
 <section class="free-lesson">
     <div class="free-lesson-content">
-        <h2>Первый Урок в Подарок!</h2>
+        <h2 data-en="Your First Lesson is Free!" data-ru="Ваш первый урок бесплатный!">Ваш первый урок бесплатный!</h2>
+        <p data-en="Sign up today and start learning programming with your first lesson completely free!"
+           data-ru="Запишитесь сегодня и начните изучать программирование с вашего первого бесплатного урока!">
+           Запишитесь сегодня и начните изучать программирование с вашего первого бесплатного урока!
+        </p>
     </div>
 </section>
 
+<script>
+    const language = 'en'; // Default language
+
+    const translations = {
+        en: { test: "Your first lesson is free!" },
+        ru: { test: "Ваш первый урок бесплатный!" }
+    };
+
+    // Function to update the text based on the selected language
+    function updateLanguage(selectedLanguage) {
+        document.getElementById("test").innerText = translations[selectedLanguage].test;
+    }
+
+    // Example: Set the initial text
+    updateLanguage(language);
+</script>
+
 <!-- Description Section -->
 <section id="description" class="section description-section">
-    <h2>Чему научит вас этот курс?</h2>
-    <p>
-        КодБайт покажет вам, как по-настоящему выглядит создание программ и игр. Unity является одной из самых популярных платформ для создания игр. 
-        Вы получите навыки в языке C#, который является одним из самых востребованных языков программирования. Знания полученные в разработке игр используются далеко не только в сфере Game-dev.
-        Полученный опыт будет полезен при любом взаимодействии с компьютерным кодом. Чем раньше начать, тем успешней вы будете!
+    <h2 data-en="What will this course teach you?" data-ru="Чему научит вас этот курс?">Чему научит вас этот курс?</h2>
+    <p data-en="CodeByte will show you how programming and game development really work. Unity is one of the most popular platforms for creating games. You will gain skills in C#, one of the most in-demand programming languages. The knowledge gained in game development is widely applicable beyond Game-dev. The earlier you start, the more successful you will be!"
+       data-ru="КодБайт покажет вам, как по-настоящему выглядит создание программ и игр. Unity является одной из самых популярных платформ для создания игр. Вы получите навыки в языке C#, который является одним из самых востребованных языков программирования. Знания полученные в разработке игр используются далеко не только в сфере Game-dev. Полученный опыт будет полезен при любом взаимодействии с компьютерным кодом. Чем раньше начать, тем успешней вы будете!">
+        КодБайт покажет вам, как по-настоящему выглядит создание программ и игр. Unity является одной из самых популярных платформ для создания игр.
     </p>
     <ul>
-        <li>Интерактивные уроки в форме аудио/видео звонка-урока</li>
-        <li>Обучение с полного нуля до опытного разработчика</li>
-        <li>Развивайте навыки программирования и проектирования</li>
-        <li>Подготовка к IT-профессиям будущего</li>
+        <li data-en="Interactive lessons in the form of audio/video calls" data-ru="Интерактивные уроки в форме аудио/видео звонка-урока">Интерактивные уроки в форме аудио/видео звонка-урока</li>
+        <li data-en="Learn from scratch to an experienced developer" data-ru="Обучение с полного нуля до опытного разработчика">Обучение с полного нуля до опытного разработчика</li>
+        <li data-en="Develop programming and design skills" data-ru="Развивайте навыки программирования и проектирования">Развивайте навыки программирования и проектирования</li>
+        <li data-en="Prepare for future IT professions" data-ru="Подготовка к IT-профессиям будущего">Подготовка к IT-профессиям будущего</li>
     </ul>
 </section>
 
 
 <section id="courses" class="section">
-    <h2>В нашем курсе вы создадите 5 игр, даже если вы — полный новичок!</h2>
+    <h2 data-en="In our course, you will create 5 games, even if you are a complete beginner!" data-ru="В нашем курсе вы создадите 5 игр, даже если вы — полный новичок!">
+        В нашем курсе вы создадите 5 игр, даже если вы — полный новичок!
+    </h2>
 
-    <!-- Игра 1 -->
+    <!-- Game 1 -->
     <div class="game-section">
-        <img src="Game-1_Cover.png" alt="Тайминг джунглей">
+        <img src="Game-1_Cover.png" alt="Jungle Timing">
         <div class="game-content">
-            <h3>Тайминг джунглей</h3>
-            <p>Ваша первая игра! Вы сделаете очень простую, но в тоже время увлекательную игру, которая проверит вашу бдительность и время реакции.</p>
-            <p>Вы узнаете:</p>
+            <h3 data-en="Jungle Timing" data-ru="Тайминг джунглей">Тайминг джунглей</h3>
+            <p data-en="Your first game! You will create a very simple yet exciting game that tests your alertness and reaction time."
+               data-ru="Ваша первая игра! Вы сделаете очень простую, но в тоже время увлекательную игру, которая проверит вашу бдительность и время реакции.">
+                Ваша первая игра! Вы сделаете очень простую, но в тоже время увлекательную игру, которая проверит вашу бдительность и время реакции.
+            </p>
+            <p data-en="You will learn:" data-ru="Вы узнаете:">Вы узнаете:</p>
             <ul>
-                <li>Базу языка C#</li>
-                <li>Как создать свой первый 2д проект в Unity</li>
-                <li>Что такое объекты в Unity и C#</li>
-                <li>Основы физики для игр (гравитация, столкновения)</li>
-                <li>Создание и использование спрайтов и текстур</li>
-                <li>Что такое UI и как он работает (пользовательский интерфейс)</li>
+                <li data-en="The basics of C#" data-ru="Базу языка C#">Базу языка C#</li>
+                <li data-en="How to create your first 2D project in Unity" data-ru="Как создать свой первый 2д проект в Unity">Как создать свой первый 2д проект в Unity</li>
+                <li data-en="What objects are in Unity and C#" data-ru="Что такое объекты в Unity и C#">Что такое объекты в Unity и C#</li>
+                <li data-en="The basics of game physics (gravity, collisions)" data-ru="Основы физики для игр (гравитация, столкновения)">Основы физики для игр (гравитация, столкновения)</li>
+                <li data-en="How to create and use sprites and textures" data-ru="Создание и использование спрайтов и текстур">Создание и использование спрайтов и текстур</li>
+                <li data-en="What UI is and how it works (user interface)" data-ru="Что такое UI и как он работает (пользовательский интерфейс)">Что такое UI и как он работает (пользовательский интерфейс)</li>
             </ul>
         </div>
     </div>
 
-    <!-- Игра 2 -->
+    <!-- Game 2 -->
     <div class="game-section">
-        <img src="Game-2_Cover.png" alt="Платформер">
+        <img src="Game-2_Cover.png" alt="Platformer">
         <div class="game-content">
-            <h3>Платформер</h3>
-            <p>Ваша вторая игра поместит вас в темный замок, в котором вам придется прыгать по платформам, собирая по пути монеты!</p>
-            <p>Вы узнаете:</p>
+            <h3 data-en="Platformer" data-ru="Платформер">Платформер</h3>
+            <p data-en="Your second game takes you to a dark castle where you will jump across platforms, collecting coins along the way!"
+               data-ru="Ваша вторая игра поместит вас в темный замок, в котором вам придется прыгать по платформам, собирая по пути монеты!">
+                Ваша вторая игра поместит вас в темный замок, в котором вам придется прыгать по платформам, собирая по пути монеты!
+            </p>
+            <p data-en="You will learn:" data-ru="Вы узнаете:">Вы узнаете:</p>
             <ul>
-                <li>Как проектировать уровни</li>
-                <li>Как настроить передвижение 2д персонажа по карте</li>
-                <li>Про реализацию механики прыжков и столкновений</li>
-                <li>Как создать персонажа с анимацией и движением</li>
-                <li>Про интерактивность объектов (сбор предметов и взаимодействие с окружающей средой)</li>
-                <li>Про оптимизацию игрового процесса для разных уровней сложности</li>
+                <li data-en="How to design levels" data-ru="Как проектировать уровни">Как проектировать уровни</li>
+                <li data-en="How to set up 2D character movement on a map" data-ru="Как настроить передвижение 2д персонажа по карте">Как настроить передвижение 2д персонажа по карте</li>
+                <li data-en="How to implement jumping and collision mechanics" data-ru="Про реализацию механики прыжков и столкновений">Про реализацию механики прыжков и столкновений</li>
+                <li data-en="How to create a character with animation and movement" data-ru="Как создать персонажа с анимацией и движением">Как создать персонажа с анимацией и движением</li>
+                <li data-en="How to make objects interactive (collect items and interact with the environment)" data-ru="Про интерактивность объектов (сбор предметов и взаимодействие с окружающей средой)">Про интерактивность объектов (сбор предметов и взаимодействие с окружающей средой)</li>
+                <li data-en="How to optimize gameplay for different difficulty levels" data-ru="Про оптимизацию игрового процесса для разных уровней сложности">Про оптимизацию игрового процесса для разных уровней сложности</li>
             </ul>
         </div>
     </div>
 
-    <!-- Игра 3 -->
+    <!-- Game 3 -->
     <div class="game-section">
-        <img src="Game-3_Cover.png" alt="Игра Водитель 2д">
+        <img src="Game-3_Cover.png" alt="2D Driver Game">
         <div class="game-content">
-            <h3>Поехали!</h3>
-            <p>Садись за руль и собирай посылки, разбросанные по карте!</p>
-            <p>вы узнаете, как:</p>
+            <h3 data-en="Let's Drive!" data-ru="Поехали!">Поехали!</h3>
+            <p data-en="Get behind the wheel and collect packages scattered across the map!" data-ru="Садись за руль и собирай посылки, разбросанные по карте!">
+                Садись за руль и собирай посылки, разбросанные по карте!
+            </p>
+            <p data-en="You will learn how to:" data-ru="Вы узнаете, как:">Вы узнаете, как:</p>
             <ul>
-                <li>Создать главное меню для игры</li>
-                <li>Настроить выбор автомобиля</li>
-                <li>Привязывать системы частиц к объектам</li>
-                <li>Оставлять на дороге следы шин</li>
-                <li>Сохранять данные вне игровой сессии</li>
-                <li>Работать с несколькими сценами в Unity</li>
-                <li>Работать с несколькими классами в C#</li>
-                <li>Работать с массивами в C#</li>
+                <li data-en="Create a main menu for the game" data-ru="Создать главное меню для игры">Создать главное меню для игры</li>
+                <li data-en="Set up vehicle selection" data-ru="Настроить выбор автомобиля">Настроить выбор автомобиля</li>
+                <li data-en="Attach particle systems to objects" data-ru="Привязывать системы частиц к объектам">Привязывать системы частиц к объектам</li>
+                <li data-en="Leave tire tracks on the road" data-ru="Оставлять на дороге следы шин">Оставлять на дороге следы шин</li>
+                <li data-en="Save data outside of the game session" data-ru="Сохранять данные вне игровой сессии">Сохранять данные вне игровой сессии</li>
+                <li data-en="Work with multiple scenes in Unity" data-ru="Работать с несколькими сценами в Unity">Работать с несколькими сценами в Unity</li>
+                <li data-en="Work with multiple classes in C#" data-ru="Работать с несколькими классами в C#">Работать с несколькими классами в C#</li>
+                <li data-en="Work with arrays in C#" data-ru="Работать с массивами в C#">Работать с массивами в C#</li>
             </ul>
         </div>
     </div>
 
-    <!-- Игра 4 -->
+    <!-- Game 4 -->
     <div class="game-section">
-        <img src="Game-4_Cover.png" alt="Игра Катимся">
+        <img src="Game-4_Cover.png" alt="Rolling">
         <div class="game-content">
-            <h3>Катимся!</h3>
-            <p>Вы перешли в третье измерение! Уклоняйтесь от летящих на тебя ракет!</p>
-            <p>Вы узнаете как:</p>
+            <h3 data-en="Rolling!" data-ru="Катимся!">Катимся!</h3>
+            <p data-en="You’ve entered the third dimension! Dodge incoming rockets!" data-ru="Вы перешли в третье измерение! Уклоняйтесь от летящих ракет!">
+                Вы перешли в третье измерение! Уклоняйтесь от летящих ракет!
+            </p>
+            <p data-en="You will learn how to:" data-ru="Вы узнаете как:">Вы узнаете как:</p>
             <ul>
-                <li>Создавать 3д объекты</li>
-                <li>Импортировать 3д модели</li>
-                <li>Генерировать случайные числа и последовательности</li>
-                <li>Работать с заготовками</li>
+                <li data-en="Create 3D objects" data-ru="Создавать 3д объекты">Создавать 3д объекты</li>
+                <li data-en="Import 3D models" data-ru="Импортировать 3д модели">Импортировать 3д модели</li>
+                <li data-en="Generate random numbers and sequences" data-ru="Генерировать случайные числа и последовательности">Генерировать случайные числа и последовательности</li>
+                <li data-en="Work with prefabs" data-ru="Работать с заготовками">Работать с заготовками</li>
             </ul>
         </div>
     </div>
 
-    <!-- Игра 5 -->
+    <!-- Game 5 -->
     <div class="game-section">
-        <img src="Game-5_Cover.png" alt="Астероиды">
+        <img src="Game-5_Cover.png" alt="Asteroids">
         <div class="game-content">
-            <h3>Астероиды - Мобильная Игра</h3>
-            <p>Управляйте джойстиком и уходите от летящих астероидов, отстреливаясь лазерами!</p>
-            <p>Вы научитесь:</p>
+            <h3 data-en="Asteroids - Mobile Game" data-ru="Астероиды - Мобильная Игра">Астероиды - Мобильная Игра</h3>
+            <p data-en="Control a joystick and dodge incoming asteroids while shooting lasers!" data-ru="Управляйте джойстиком и уходите от летящих астероидов, отстреливаясь лазерами!">
+                Управляйте джойстиком и уходите от летящих астероидов, отстреливаясь лазерами!
+            </p>
+            <p data-en="You will learn how to:" data-ru="Вы научитесь:">Вы научитесь:</p>
             <ul>
-                <li>Управлять игрой с мобильного устройства</li>
-                <li>Пользоваться зацикливанием экрана</li>
-                <li>Создавать систему очков и жизней</li>
-                <li>Работать с большим количеством классов</li>
-                <li>Импортировать ассеты в Unity</li>
-                <li>Создавать интерфейс для мобильных устройств</li>
-                <li>Подключить телефон к Unity</li>
+                <li data-en="Control the game from a mobile device" data-ru="Управлять игрой с мобильного устройства">Управлять игрой с мобильного устройства</li>
+                <li data-en="Use screen wrapping" data-ru="Пользоваться зацикливанием экрана">Пользоваться зацикливанием экрана</li>
+                <li data-en="Create a scoring and lives system" data-ru="Создавать систему очков и жизней">Создавать систему очков и жизней</li>
+                <li data-en="Work with a large number of classes" data-ru="Работать с большим количеством классов">Работать с большим количеством классов</li>
+                <li data-en="Import assets into Unity" data-ru="Импортировать ассеты в Unity">Импортировать ассеты в Unity</li>
+                <li data-en="Create a mobile-friendly interface" data-ru="Создавать интерфейс для мобильных устройств">Создавать интерфейс для мобильных устройств</li>
+                <li data-en="Connect a phone to Unity" data-ru="Подключить телефон к Unity">Подключить телефон к Unity</li>
             </ul>
         </div>
     </div>
 </section>
 
 <section id="signup" class="section contact">
-    <h2>Записаться на курс</h2>
-    <p>Заполните форму ниже, чтобы записаться на наш курс и начать учиться программировать!</p>
-    <p>Мы свяжемся с вами!</p>
+    <h2 data-en="Sign Up for the Course" data-ru="Записаться на курс">Записаться на курс</h2>
+    <p data-en="Fill out the form below to sign up for our course and start learning programming!" data-ru="Заполните форму ниже, чтобы записаться на наш курс и начать учиться программировать!">
+        Заполните форму ниже, чтобы записаться на наш курс и начать учиться программировать!
+    </p>
+    <p data-en="We'll contact you!" data-ru="Мы свяжемся с вами!">Мы свяжемся с вами!</p>
     <form action="https://formspree.io/f/manybygo" method="POST">
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" placeholder="Имя" required>
+        <label for="name" data-en="Name:" data-ru="Имя:">Имя:</label>
+        <input type="text" id="name" name="name" placeholder="Name" required>
         
-        <label for="email">Электронная Почта:</label>
-        <input type="email" id="email" name="email" placeholder="Почта" required>
+        <label for="email" data-en="Email:" data-ru="Электронная Почта:">Электронная Почта:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
 
-        <label for="phone">Номер Телефона:</label>
-        <input type="tel" id="phone" name="phone" placeholder="(необязательно)" pattern="^\+?[1-9]\d{1,14}$">
+        <label for="phone" data-en="Phone Number:" data-ru="Номер Телефона:">Номер Телефона:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(optional)" pattern="^\+?[1-9]\d{1,14}$">
         
-        <button type="submit">Отправить</button>
+        <button type="submit" data-en="Submit" data-ru="Отправить">Отправить</button>
       </form>      
 </section>
 
 <footer>
-    <p>КодБайт - Школа программирования для детей</p>
+    <p data-en="CodeByte - Online Programming School" data-ru="КодБайт - Школа программирования онлайн">КодБайт - Школа программирования онлайн</p>
 </footer>
 
 <script src="script.js"></script>
+<script>
+    // Function to switch language and update the flag
+    function switchLanguage(selectedLang) {
+        // Update all text content based on the selected language
+        document.querySelectorAll('[data-en]').forEach(el => {
+            el.innerText = el.getAttribute(`data-${selectedLang}`);
+        });
+
+        // Update the flag in the .selected-lang element
+        const selectedLangElement = document.querySelector('.selected-lang');
+        if (selectedLang === 'en') {
+            selectedLangElement.style.setProperty('--flag-url', "url('https://flagsapi.com/GB/flat/32.png')");
+            selectedLangElement.innerText = "English";
+        } else if (selectedLang === 'ru') {
+            selectedLangElement.style.setProperty('--flag-url', "url('https://flagsapi.com/RU/flat/32.png')");
+            selectedLangElement.innerText = "Русский";
+        }
+    }
+
+    // Add event listeners to language options
+    document.querySelectorAll('.lang-option').forEach(option => {
+        option.addEventListener('click', (e) => {
+            e.preventDefault();
+            const selectedLang = option.getAttribute('data-lang');
+            switchLanguage(selectedLang);
+        });
+    });
+
+    // Detect and set the language on page load
+    document.addEventListener('DOMContentLoaded', detectAndSetLanguage);
+
+    // Function to detect the browser's default language and set the website's language
+    function detectAndSetLanguage() {
+        // Get the browser's default language (e.g., "en-US" or "ru")
+        const browserLanguage = navigator.language || navigator.userLanguage;
+
+        // Extract the first two characters to get the language code (e.g., "en" or "ru")
+        const languageCode = browserLanguage.slice(0, 2);
+
+        // Check if the detected language is supported, otherwise default to English
+        const supportedLanguages = ['en', 'ru'];
+        const selectedLanguage = supportedLanguages.includes(languageCode) ? languageCode : 'en';
+
+        // Set the language on the website
+        switchLanguage(selectedLanguage);
+    }
+</script>
 
 </body>
 </html>
